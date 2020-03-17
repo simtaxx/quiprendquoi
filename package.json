@@ -1,0 +1,23 @@
+{
+  "name": "quiprendquoi",
+  "version": "1.0.0",
+  "description": "School project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simtaxx/quiprendquoi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simtaxx/quiprendquoi/issues"
+  },
+  "homepage": "https://github.com/simtaxx/quiprendquoi#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
