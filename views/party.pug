@@ -1,0 +1,25 @@
+include ../partials/header.pug
+h1 Qui prend quoi ?
+h2 Page événement
+h2= party.name
+h3 Créé par #{party.author}
+p= id
+label(for="url") Partagez l'événement
+input(id="url" value=`${url}` data-clipboard=`${url}` data-share-url=`${url}` data-share-title=`${party.name}` data-share-text=`${party.author}`)
+
+h2 Ajoutez un élément à votre wati liste
+form(method="post" action=`/party/${id}/items`)
+  div
+    label(for="name") Nom de l'élément
+    input(name="name" id="name" placeholder="Ex: Champagne")
+  div
+    label(for="user") Qui s'en charge ?
+    input(name="user" id="user" placeholder="Ex: Haris")
+  button(type="submit") Créer
+
+each el in elements
+  form(method="post" action=`/party/${id}/items/${el._id}`)
+    div
+      button(type="submit") Supprimer
+      p= el.name
+      p= el.user
