@@ -1,7 +1,7 @@
-function notifyNewElement() {
+function notifyNewElement(message) {
   if (("Notification" in window)) {
     if (Notification.permission === "granted") {
-      var notification = new Notification("Un nouvel élément a été ajouté")
+      var notification = new Notification(message)
     }
     else if (Notification.permission !== 'denied') {
       Notification.requestPermission(function (permission) {
@@ -24,12 +24,11 @@ function notifyNewElement() {
       if (elementCount === 0) {
         elementCount = data.items.length
       } else if (elementCount < data.items.length) {
-        console.log("new element added")
-        notifyNewElement()
+        notifyNewElement("Un nouvel élément a été ajouté")
         window.location.reload()
       } else if (elementCount > data.items.length) {
-        console.log("element deleted")
-        elementCount = data.items.length
+        notifyNewElement("Un élément a été supprimé")
+        window.location.reload()
       }
     })
   }, 5000)
