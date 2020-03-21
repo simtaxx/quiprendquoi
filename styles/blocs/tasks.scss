@@ -1,0 +1,44 @@
+.tasks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__task {
+    width: 270px;
+    margin-right: 20px;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    background: #00aaff;
+    padding: 10px 10px 30px 10px;
+    margin-bottom: 20px;
+    position: relative;
+    transition: .2s;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

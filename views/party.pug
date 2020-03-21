@@ -17,13 +17,13 @@ section.party
     button(type="submit") Créer
 
   h2 Tâches en cours
-  each el in elements
-    form(method="post" action=`/party/${id}/items/${el._id}`).newParty
-      div
-        div.newParty__field
-          p tâche: 
+  div.tasks
+    each el in elements
+      form(method="post" action=`/party/${id}/items/${el._id}`).tasks__task
+        div.tasks__row
+          p.tasks__title TÂCHE
           p= el.name
-        div.newParty__field
-          p Qui s'en occupe: 
+        div.tasks__row
+          p.tasks__title QUI S'EN OCCUPE
           p= el.user
         button(type="submit") Supprimer
