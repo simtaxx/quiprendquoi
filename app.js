@@ -21,6 +21,23 @@ app.get('/', function(req, res) {
 
 })
 
+app.get('/party', function(req, res) {
+
+  axios
+  .get(`${process.env.API_URL}/party/${req.params.id}`)
+  .then(({ data }) =>
+    res.render('party', {
+      party: data,
+      title: data.name,
+      url: `${process.env.FRONT_URL}:${process.env.PORT}/party/${data._id}`,
+      id: `${data._id}`,
+      elements: data.items
+    }),
+  )
+  .catch((err) => console.log(err));
+
+})
+
 app.get('/party/:id', function(req, res) {
 
   axios
