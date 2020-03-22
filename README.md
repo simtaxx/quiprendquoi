@@ -26,4 +26,16 @@ npm run dev
 
 ## Article personnel
 
-### Sujet: Web Bluetooth API
+### Sujet: Notifications API
+
+Notifications API est une API qui va nous permettre de notifier l'utilisateur concernant certains
+évènement de l'application.
+Dans mon cas je m'en suis servi pour avertir l'utilisateur quand un élément est ajouté à un
+événement où quand un élément est supprimé.
+Avant de commencer à spammer de façon indésirable notre utilisateur nous allons tout d'abord
+lui demander son autorisation, car ces notifications peuvent être nuisibles pour certaines
+personne.
+Il y a 3 choix auquels notre code doit s'adapter, default si l'utilisateur n'a pas encore choisi
+ce qu'il voulait (en général c'est la première fois ou il accède à l'application), granted si
+l'utilisateur a accepté de se faire notifier et denied si il a décidé de refuser les notifications.
+
