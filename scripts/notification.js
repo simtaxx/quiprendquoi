@@ -17,7 +17,7 @@ function notifyNewElement(message) {
   let elementCount = 0
   let idPage = window.location.href.substring(window.location.href.lastIndexOf('/') + 1)
   setInterval(() => {
-    fetch(`http://bastiencalou.fr:3000/party/${idPage}`)
+    fetch(`//bastiencalou.fr:3000/party/${idPage}`)
     .then((resp) => resp.json())
     .then(function(data) {
       console.log(elementCount)
