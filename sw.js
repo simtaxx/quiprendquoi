@@ -44,6 +44,24 @@ addEventListener('fetch', (event) => {
   }
 });
 
+if ('PushManager' in window) {
+  const askPermission = () => {
+    return new Promise((resolve, reject) => {
+      const permissionResult = Notification.requestPermission((result) => {
+        resolve(result)
+      })
+      if (permissionResult) {
+        permissionResult.then(resolve, reject)
+      }
+    })
+    .then((permissionResult) => {
+      if (permissionResult !== 'granted') {
+        throw new Error('Permission denied')
+      }
+    })
+  }
+}
+
 function isPartyPage(url) {
   return /party\/[a-zA-Z0-9]*$/.test(url);
 }
