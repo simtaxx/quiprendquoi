@@ -43,3 +43,23 @@ Il y a 3 choix auquels notre code doit s'adapter:
 - granted si l'utilisateur a accepté de se faire notifier
 - denied si il a décidé de refuser les notifications.
 
+Ces notifications vont nous permettre de notifier l'utilisateur même lorsqu'il sera en dehors du navigateur
+ce qui va nous permettre de pouvoir le rediriger vers notre application en cliquant sur cette notification.
+
+De ce fait nous allons avoir plus d'interraction avec l'application et nous allons pouvoir fidéliser les 
+utilisateurs plus efficacement en les incitants à cliquer sur cette notification.
+
+des avantages certes, mais aussi un inconvénient principal :
+
+- Le spam
+
+Pour certaines personne le fait de recevoir des notifications pour tout et pour rien peut avoir un impact
+négatif sur la vision de notre application, cela ressemblerais à du racolage et nous ne voulons pas de cette
+image.
+
+Donc pour éviter que notre application sois considérée comme une application en manque d'utilisateur
+choisissez bien quel sont les événements qui méritent le plus d'être notifié pour que ce sois
+aussi plaisant d'un message sur Messenger, une promotion sur Dealabs, la récupération de nos vies
+sur Candy Crush et non désagréable comme votre solde bancaire aussi négatif que votre tante éloigné
+pendant cette période de quarantaine !
+
