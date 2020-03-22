@@ -1,3 +1,10 @@
 .home {
-  padding-left: 20px;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: #5a85e4;
+  color: white;
+  padding: 40px 80px;
 }

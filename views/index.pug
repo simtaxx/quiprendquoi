@@ -2,14 +2,13 @@ include ../partials/header.pug
 section.home
   h2 Créer un événement
   form(method="post" action="/party").newParty
-    div
-      div.newParty__field
-        label(for="name") Nom de l'événement
-        input(name="name" id="name" required minlength="3" placeholder="Nouvel an")
-      div.newParty__field
-        label(for="author" required) Votre nom
-        input(name="author" id="author" placeholder="Haris")
-      div.newParty__field
-        label(for="date") Date de l'événement
-        input(name="date" id="date" type="date")
-    button(type="submit" id="submitForm").newParty__button Créer
+    div.newParty__field
+      label(for="name") Nom de l'événement
+      input(name="name" id="name" required minlength="3" placeholder="Nouvel an")
+    div.newParty__field
+      label(for="author" required) Votre nom
+      input(name="author" id="author" placeholder="Haris")
+    div.newParty__field
+      label(for="date") Date de l'événement
+      input(name="date" id="date" type="date")
+    button(type="submit" id="submitForm").newParty__button Créer l'événement
