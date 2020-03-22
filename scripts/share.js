@@ -14,9 +14,10 @@ if(navigator.share) {
 }
 
 function shareInfo($shareEl) {
+  const idPage = window.location.href.substring(window.location.href.lastIndexOf('/') + 1)
   navigator
   .share({
-    url: $shareEl.getAttribute('data-share-url'),
+    url: $shareEl.getAttribute('data-share-url') + idPage,
     title: $shareEl.getAttribute('data-share-title'),
     text: `${$shareEl.getAttribute('data-share-text')} vous invite à rejoindre un évènement`
   })

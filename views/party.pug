@@ -6,7 +6,7 @@ section.party
   h3 Créé par #{party.author}
   form
     label(for="url") Partagez l'événement
-    input(id="url" value=`${url}` data-clipboard=`${url}` data-share-url=`${url}` data-share-title=`${party.name}` data-share-text=`${party.author}`)
+    input(id="url" value=`${url}` data-clipboard=`https://quiprendquoii.herokuapp.com/party/` data-share-url=`https://quiprendquoii.herokuapp.com/party/` data-share-title=`${party.name}` data-share-text=`${party.author}`)
 
   h2 Ajoutez une tâche à votre wati liste
   form(method="post" action=`/party/${id}/items`)

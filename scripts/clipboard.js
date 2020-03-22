@@ -11,8 +11,9 @@ if (navigator.clipboard) {
 }
 
 function copyToClipboard($clipboardEl, $button) {
+  const idPage = window.location.href.substring(window.location.href.lastIndexOf('/') + 1)
   navigator.clipboard
-  .writeText($clipboardEl.getAttribute('data-clipboard'))
+  .writeText($clipboardEl.getAttribute('data-clipboard')+ idPage)
   .then(() => {
     $button.innerHTML = 'Copié !';
     setTimeout(() => ($button.innerHTML = 'Copier'), 2000);
